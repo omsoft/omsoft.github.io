@@ -607,7 +607,7 @@ label {
 
 /* Checkboxes & Radio Buttons
 -------------------------------------------------------*/
-input[type="checkbox"] {
+/* input[type="checkbox"] {
 	display: none; }
 
 input[type="checkbox"] + label:before {
@@ -668,7 +668,20 @@ input[type="radio"]:checked + label:before {
 	padding: 1px; }
 
 input[type="radio"]:focus {
-	outline: none; }
+	outline: none; } */
+
+label {
+  display: flex;
+  align-items: center;
+	gap: 10px;
+}
+input[type="checkbox"] {
+  flex: none;
+	align-self: flex-start;
+	width: 20px;
+	height: 20px;
+	border-right: 20px;
+}
 
 #contact-form .message {
 	height: 50px;
@@ -3877,5 +3890,16 @@ dd {
 
 .bottom-divider {
 	border-bottom: 1px solid #E8ECED; }
+
+/* form validarion styles */
+input[type="text"].error, input[type="email"].error, input[type="tel"].error {
+	border: 1px solid red;
+	margin-bottom: 0px !important;
+}
+label.error {
+	color: red;
+  padding-left: 10px;
+  border-left: 1px solid red;
+}
 
 /*# sourceMappingURL=style.css.map */

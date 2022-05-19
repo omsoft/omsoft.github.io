@@ -61,7 +61,7 @@
     } else {
       $navHolder.removeClass('nav__holder--sticky');
     }
-    
+
   });
 
 
@@ -73,7 +73,7 @@
       $navHolder.addClass('nav--sticky');
     }
   }
-  
+
 
   /* Mobile Navigation
   -------------------------------------------------------*/
@@ -84,7 +84,7 @@
     else {
       $(this).addClass("active");
     }
-  });  
+  });
 
   if ( $('html').hasClass('mobile') ) {
     $('body').on('click',function() {
@@ -121,7 +121,7 @@
 
     /* Testimonials
     -------------------------------------------------------*/
-    $("#owl-testimonials").owlCarousel({      
+    $("#owl-testimonials").owlCarousel({
       center: false,
       items: 1,
       loop: true,
@@ -196,6 +196,28 @@
   $('a[href="#top"]').on('click',function(){
     $('html, body').animate({scrollTop: 0}, 1350, "easeInOutQuint");
     return false;
+  });
+
+
+  /* Form validation
+  -------------------------------------------------------*/
+  // $.validator.setDefaults({
+  //     ignore: [] // DON'T IGNORE PLUGIN HIDDEN SELECTS, CHECKBOXES AND RADIOS!!!
+  // });
+
+  $("#mc-embedded-subscribe-form").validate({
+    ignore: [':not(checkbox:hidden)'],
+    // rules: {
+    //   "MMERGE4": {
+    //     required: true,
+    //     minlength: 1
+    //   }
+    // },
+    // messages: {
+    //   'MMERGE4': {
+    //     required: "You must check at least 1 box"
+    //   }
+    // }
   });
 
 })(jQuery);
